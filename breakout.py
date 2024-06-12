@@ -1,6 +1,6 @@
 from campy.gui.events.timer import pause
 from campy.graphics.gimage import GImage
-from extensiongraphics import BreakoutGraphics
+from breakoutgraphics import BreakoutGraphics
 
 FRAME_RATE = 10         # 100 frames per second
 NUM_LIVES = 3			# Number of attempts
