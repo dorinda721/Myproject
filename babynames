@@ -1,0 +1,22 @@
+def add_data_for_name(name_data, year, rank, name):
+    """
+    Adds the given year and rank to the associated name in the name_data dict.
+
+    Input:
+        name_data (dict): dict holding baby name data
+        year (str): the year of the data entry to add
+        rank (str): the rank of the data entry to add
+        name (str): the name of the data entry to add
+
+    Output:
+        This function modifies the name_data dict to store the provided
+        name, year, and rank. This function does not return any value.
+    """
+    
+    if name in name_data:
+        if year in name_data[name] and int(rank) < int(name_data[name][year]):
+            name_data[name][year] = rank
+        if year not in name_data[name]:
+            name_data[name][year] = rank
+    else:
+        name_data[name] = {year: rank}
